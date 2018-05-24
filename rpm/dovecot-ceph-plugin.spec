@@ -8,7 +8,7 @@
 # License version 2.1, as published by the Free Software
 # Foundation.  See file COPYING.
 
-%{!?dovecot_devel: %define dovecot_devel dovecot22-devel}
+%{!?dovecot_devel: %define dovecot_devel dovecot22u-devel}
 %{!?librados_version: %define librados_version 10.2.5}
 
 Name:		dovecot-ceph-plugin
@@ -27,10 +27,10 @@ Conflicts:	otherproviders(dovecot-ceph-plugin)
 BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 BuildRequires:	%dovecot_devel
 BuildRequires:	librados-devel >= %librados_version
-BuildRequires:	libjansson-devel >= 2.9
+BuildRequires:	jansson-devel >= 2.9
 BuildRequires:	gcc-c++
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig
 
 %description
 Dovecot is an IMAP and POP3 server for Linux and UNIX-like systems,
